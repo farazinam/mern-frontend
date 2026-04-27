@@ -20,7 +20,7 @@ function ViewPro() {
   //Delete
   const handleDelete = (id) => {
     try {
-      axios.delete(`http://localhost:5000/delete/${id}`);
+      axios.delete(`${process.env.REACT_APP_API_URL}/delete/${id}`);
       setPro(pro.filter(u => u._id != id));
       // console.log(data);
       alert("Record Deleted")
@@ -33,7 +33,7 @@ function ViewPro() {
 
   const fetchRecords = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/product");
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/product`);
       const data = response.data;
       setPro(data);
       console.log(data);

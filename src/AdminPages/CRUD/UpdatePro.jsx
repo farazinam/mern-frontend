@@ -22,7 +22,9 @@ function UpdatePro() {
 
     const getProduct = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/product/${getId}`);
+            const response = await axios.get(
+                 `${process.env.REACT_APP_API_URL}/product/${getId}`
+            );
             const data = response.data;
             console.log("Response :", data);
             setPro({
