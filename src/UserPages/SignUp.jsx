@@ -19,7 +19,7 @@ function SignUp() {
     const HandleSubmit = async (e) => {
         e.preventDefault();
         try{
-        await axios.post("http://localhost:3000/signup", user);
+        await axios.post("http://localhost:5000/signup", user);
         alert("Account Created !!");
         setUser({ username : "", email : "", password : "", roleID: "2"})
         navigate("/");

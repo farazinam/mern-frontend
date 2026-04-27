@@ -22,7 +22,7 @@ function UpdatePro() {
 
     const getProduct = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/product/${getId}`);
+            const response = await axios.get(`http://localhost:5000/product/${getId}`);
             const data = response.data;
             console.log("Response :", data);
             setPro({
@@ -63,7 +63,7 @@ function UpdatePro() {
         }
 
         try {
-            await axios.put(`http://localhost:3000/product/${getId}`,
+            await axios.put(`http://localhost:5000/product/${getId}`,
                 formData,
         {
           headers: {

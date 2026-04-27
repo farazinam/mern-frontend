@@ -13,7 +13,7 @@ $(document).ready(function ($) {
         navigation : true,
         slideSpeed : 1000,
         stopOnHover: true,
-        autoPlay: 3000,
+        autoPlay: 5000,
         singleItem: true,
         transitionStyle : "fade",
         navigationText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']

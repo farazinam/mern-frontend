@@ -32,7 +32,7 @@ function AddPro() {
         formData.append("pi", pro.pi)
 
         try {
-            axios.post("http://localhost:3000/product", formData, {
+            axios.post("http://localhost:5000/product", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data"
                 }

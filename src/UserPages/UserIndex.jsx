@@ -28,7 +28,7 @@ const filteredProducts = pro.filter((p) => /////
 
     const fetchRecords = async() => {
     try {
-      const response = await axios.get("http://localhost:3000/product");
+      const response = await axios.get("http://localhost:5000/product");
       const data = response.data;
       setPro(data);
       console.log(data);

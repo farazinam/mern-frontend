@@ -21,10 +21,10 @@ const handleSubmit = async (e) => {
 
   try {
     const res = await axios.post(
-      "http://localhost:3000/send-email", 
+      "http://localhost:5000/send-email", 
       mailing
     );
-
+    alert('Thank you for contacting us, check your email for more related info.')
     console.log(res.data);
   } catch (error) {
     console.log("Error Occured: ", error);
