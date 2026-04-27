@@ -1,0 +1,141 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { useAuth } from '../ContextAPI'
+
+function UserHeader() {
+  const {logout} = useAuth();
+  return (
+   <div>
+  {/*[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]*/}
+  {/*[if (gte IE 9)|!(IE)]><html lang="en" class="no-js"> <![endif]*/}
+  {/* Basic */}
+  <title>Sulfur | Home</title>
+  {/* Define Charset */}
+  <meta charSet="utf-8" />
+  {/* Responsive Metatag */}
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  {/* Page Description and Author */}
+  <meta name="description" content="Sulfur - Responsive HTML5 Template" />
+  <meta name="author" content="Shahriyar Ahmed" />
+  {/* Bootstrap CSS  */}
+  <link rel="stylesheet" href="UserAsset/bootstrap/css/bootstrap.min.css" type="text/css" />
+  {/* Font Awesome CSS */}
+  <link rel="stylesheet" href="UserAsset/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"></link>
+  {/* Owl Carousel CSS */}
+  <link rel="stylesheet" href="UserAsset/css/owl.carousel.css" type="text/css" />
+  <link rel="stylesheet" href="UserAsset/css/owl.theme.css" type="text/css" />
+  <link rel="stylesheet" href="UserAsset/css/owl.transitions.css" type="text/css" />
+  {/* Css3 Transitions Styles  */}
+  <link rel="stylesheet" type="text/css" href="UserAsset/css/animate.css" />
+  {/* Lightbox CSS */}
+  <link rel="stylesheet" type="text/css" href="UserAsset/css/lightbox.css" />
+  {/* Sulfur CSS Styles  */}
+  <link rel="stylesheet" type="text/css" href="UserAsset/css/style.css" />
+  {/* Responsive CSS Style */}
+  <link rel="stylesheet" type="text/css" href="UserAsset/css/responsive.css" />
+  <header className="clearfix">
+    {/* Start Top Bar */}
+    <div className="container">
+      <div className="row">
+        <div className="col-md-12">
+          <div className="top-bar">
+            <div className="row">
+              <div className="col-md-6">
+                {/* Start Contact Info */}
+                <ul className="contact-details">
+                  <li><a href="#"><i className="fa fa-phone" /> +12 345 678 000</a>
+                  </li>
+                  <li><a href="#"><i className="fa fa-envelope-o" /> support@sulfur.com</a>
+                  </li> 
+                </ul>
+                {/* End Contact Info */}
+              </div>{/* .col-md-6 */}
+              <div className="col-md-6">
+                {/* Start Social Links */}
+                <ul className="social-list">
+                  <li>
+                    <a href="#" onClick={logout}><i className="fa fa-sign-out" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><i className="fa fa-facebook" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><i className="fa fa-twitter" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><i className="fa fa-google-plus" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><i className="fa fa-youtube" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><i className="fa fa-linkedin" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><i className="fa fa-flickr" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><i className="fa fa-vimeo-square" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><i className="fa fa-skype" /></a>
+                  </li>
+                </ul>
+                {/* End Social Links */}
+              </div>{/* .col-md-6 */}
+            </div>
+          </div>
+        </div>                        
+      </div>{/* .row */}
+    </div>{/* .container */}
+    {/* End Top Bar */}
+    {/* Start  Logo & Naviagtion  */}
+    <div className="navbar navbar-default navbar-top">
+      <div className="container">
+        <div className="navbar-header">
+          {/* Stat Toggle Nav Link For Mobiles */}
+          <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <i className="fa fa-bars" />
+          </button>
+          {/* End Toggle Nav Link For Mobiles */}
+          <Link className="navbar-brand" to='/userhome'>MERN</Link>
+        </div>
+        <div className="navbar-collapse collapse">
+          {/* Start Navigation List */}
+          <ul className="nav navbar-nav navbar-right">
+            <li>
+              <Link className="active" to='/userhome'>Home</Link>
+            </li>
+            <li>
+              <Link to='/userabout'>About Us</Link>
+            </li>
+            <li>
+              <Link to='/userservice'>Service</Link>
+            </li>
+            <li>
+              <a href=''>Portfolio</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+              <ul className="dropdown">
+                <li>
+                  <a href="blog-item.html">Item Page</a>
+                </li>
+              </ul>
+            </li>
+            <li><Link to='/usercontact'>Contact</Link>
+            </li>
+          </ul>
+          {/* End Navigation List */}
+        </div>
+      </div>
+    </div>
+    {/* End Header Logo & Naviagtion */}
+  </header>
+</div>
+
+  )
+}
+
+export default UserHeader
