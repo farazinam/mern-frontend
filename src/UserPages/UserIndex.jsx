@@ -28,7 +28,7 @@ const filteredProducts = pro.filter((p) => /////
 
     const fetchRecords = async() => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/product`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/product`);
       const data = response.data;
       setPro(data);
       console.log(data);

@@ -19,7 +19,7 @@ const {login} =useAuth();
         e.preventDefault();
 
         try {
-            const res = await axios.post(`${process.env.REACT_APP_API_URL}/signin`, signin);
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/signin`, signin);
             alert(res.data.message);
             // localStorage.setItem("token", res.data.token)
             login(res.data.token)

@@ -19,7 +19,7 @@ function DetailPage() {
 
     const getProduct = async () => {
         try {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/product/${getId}`);
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/product/${getId}`);
             const data = response.data;
             console.log("Response :", data);
             setPro({

@@ -19,7 +19,7 @@ function SignUp() {
     const HandleSubmit = async (e) => {
         e.preventDefault();
         try{
-        await axios.post(`${process.env.REACT_APP_API_URL}/signup`, user);
+        await axios.post(`${import.meta.env.VITE_API_URL}/signup`, user);
         alert("Account Created !!");
         setUser({ username : "", email : "", password : "", roleID: "2"})
         navigate("/");
